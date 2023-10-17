@@ -13,5 +13,6 @@ coverage.json
 .env.dev
 .env.prod
 .env.*
+.env
 
 dist

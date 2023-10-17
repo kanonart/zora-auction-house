@@ -1,9 +1,13 @@
 import { task } from "hardhat/config";
 import "@nomiclabs/hardhat-waffle";
-import "@nomiclabs/hardhat-ethers";
+import "@nomiclabs/hardhat-etherscan";
+import dotenv from 'dotenv';
+dotenv.config();
+import 'hardhat-ignore-warnings';
 import "hardhat-typechain";
 import "solidity-coverage";
 import "@nomiclabs/hardhat-etherscan";
+import "@nomiclabs/hardhat-ethers";
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -21,6 +25,47 @@ task("accounts", "Prints the list of accounts", async (args, hre) => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
-export default {
-  solidity: "0.6.8",
-};
+const config = {
+  networks: {
+    hardhat: {},
+    localhost: {
+      url: "http://127.0.0.1:8545"
+    },
+    goerli: {
+      url: `https://eth-goerli.g.alchemy.com/v2/${process.env.RPC_API_KEY}`,
+      accounts: {
+        mnemonic: `${process.env.MNEMONIC}`
+      }
+    },
+    sepolia: {
+      url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.RPC_API_KEY}`,
+      accounts: {
+        mnemonic: `${process.env.MNEMONIC}`
+      }
+    }    
+  },
+  solidity: {
+    version: "0.6.8",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  },
+  paths: {
+    sources: "./contracts",
+    tests:"./test",
+    cache: "./cache",
+    artifacts: "./artifacts"
+  },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY
+  },
+  mocha: {
+    timeout: 40000
+  },
+  warnings: 'off',
+}
+
+export default config;
