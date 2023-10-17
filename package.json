@@ -47,7 +47,10 @@
     "@zoralabs/core": "^1.0.7",
     "dotenv": "^8.2.0",
     "fs-extra": "^9.1.0",
+    "hardhat-ignore-warnings": "^0.2.9",
+    "hjson": "^3.2.2",
     "minimist": "^1.2.5",
-    "solidity-coverage": "^0.7.16"
+    "solidity-coverage": "^0.7.16",
+    "table": "^6.8.1"
   }
 }
