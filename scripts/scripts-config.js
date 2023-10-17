@@ -2,7 +2,8 @@ module.exports = {
     "localhost": {
         "deploy.js": [
             {
-                name: "BadERC721"               
+                name: "BadBidder",
+                constructorArgs: ["0xf86aF9312948f304445b20579F25300a495e3d74","0xf86aF9312948f304445b20579F25300a495e3d74"]               
             }
             // ,
             // {
