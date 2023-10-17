@@ -46,8 +46,10 @@ function writeJSONToFile(filePath, data) {
 
 // @dev saveDeploymentData is a function that saves the contract's arguments, address, and libraries used in the deployments directory.
 async function saveDeploymentData(contractName, contractInstance, args, lib){
-	const data ={
+    const artifact = await readAndParseContractArtifact(contractName);
+    const data ={
 		address: contractInstance.address,
+        sourceName: artifact.sourceName,
 		args: args,
 		libraries: lib,
 		abi: contractInstance.interface.format('json')

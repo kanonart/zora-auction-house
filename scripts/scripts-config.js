@@ -2,7 +2,7 @@ module.exports = {
     "localhost": {
         "deploy.js": [
             {
-                name: "TestERC721"               
+                name: "BadERC721"               
             }
             // ,
             // {
@@ -61,7 +61,7 @@ module.exports = {
     "goerli": {
         "deploy.js": [
             {
-                name: "TestERC721"
+                name: "BadERC721"
             }
             // ,
             // {
@@ -115,7 +115,7 @@ module.exports = {
         //         args: ["ReservationBook.address"]
         //     }
         // ],
-        "verify.js": ["TestERC721"]
+        "verify.js": ["BadERC721"]
     }, 
     // "mainnet": {
     //     "deploy.js": [

@@ -79,15 +79,16 @@ function extractContractDataFromDeploymentFiles(file) {
 
   // Extract the required verification arguments from the json
   const contractAddress = deploymentData.address;
+  const sourceName = deploymentData.sourceName;  
   const contractArgs = deploymentData.args;
   const contractLibraries = deploymentData.libraries;
 
-  return { contract, contractAddress, contractArgs, contractLibraries };
+  return { contract, contractAddress, sourceName ,contractArgs, contractLibraries };
 }
 
-async function etherscanVerify(contract, contractAddress, contractArgs, contractLibraries) {
+async function etherscanVerify(contract, contractAddress, sourceName, contractArgs, contractLibraries) {
     return await hre.run("verify:verify", {
-      contract: `contracts/${contract}.sol:${contract}`,
+      contract: `${sourceName}:${contract}`,
       address: contractAddress,
       constructorArguments: contractArgs,
       libraries: contractLibraries
@@ -117,11 +118,11 @@ async function main(configArray) {
     };
 
     // Extract contract data
-    const { contract, contractAddress, contractArgs, contractLibraries } = extractContractDataFromDeploymentFiles(singleContract);
+    const { contract, contractAddress, sourceName, contractArgs, contractLibraries } = extractContractDataFromDeploymentFiles(singleContract);
 
     // Run the verification task
     try {
-        await etherscanVerify(contract, contractAddress, contractArgs, contractLibraries);
+        await etherscanVerify(contract, contractAddress, sourceName, contractArgs, contractLibraries);
         prepareAndDisplayVerificationResultsTable(table, contract, contractAddress, contractArgs, contractLibraries, logMessages);
     } catch (error) {
         prepareAndDisplayVerificationResultsTable(table, contract, contractAddress, contractArgs, contractLibraries, logMessages, error);
