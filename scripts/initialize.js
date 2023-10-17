@@ -130,7 +130,7 @@ async function main(configArray) {
     const INITIALIZE_CONFIG = fastUtils.prepareInitConfig(network,configArray);
 
 	console.log('\n\nRunning initializations . . .')
-	signer = await hre.ethers.getSigner();	
+	signer = await hre.ethers.provider.getSigner();	
 
 	const table = createConsoleTable();
 
@@ -160,11 +160,3 @@ if (require.main === module) {
 			process.exit(1);
 		});
 }
-
-
-
-
-
-
-
-
