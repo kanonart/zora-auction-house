@@ -4,6 +4,8 @@ node_modules
 cache
 artifacts
 typechain
+deployments
+archive
 
 coverage
 coverage.json
@@ -13,5 +15,7 @@ coverage.json
 .env.dev
 .env.prod
 .env.*
+.env
+
 
 dist
