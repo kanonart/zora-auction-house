@@ -2,177 +2,27 @@ module.exports = {
     "localhost": {
         "deploy.js": [
             {
+                name: "WETH"
+            },
+            {
                 name: "AuctionHouse",
-                constructorArgs: ["0xf86aF9312948f304445b20579F25300a495e3d74","0xf86aF9312948f304445b20579F25300a495e3d74"]               
-            }
-            // ,
-            // {
-            //     name: "CommonNFT"
-            // },
-            // {
-            //     name: "BasisPoints"
-            // },
-            // {
-            //     name: "DQ",
-            //     libraries: {"BasisPoints": "BasisPoints.address"}
-            // },
-            // {
-            //     name: "DQURI"
-            // },
-            // {
-            //     name: "Base64"
-            // },
-            // {
-            //     name: "RQ",
-            //     libraries: {"BasisPoints": "BasisPoints.address"},
-            //     constructorArgs: ["DQ.address"]
-            // },
-            // {
-            //     name: "DispatchLib"
-            // },
-            // {
-            //     name: "RQDQURI"
-            // },
-            // {
-            //     name: "RQDQ",
-            //     libraries: {"DispatchLib": "DispatchLib.address", "BasisPoints": "BasisPoints.address"},
-            //     constructorArgs: ["K21.address", "RQDQURI.address"]
-            // },
-            // {
-            //     name: "ReservationBook",
-            //     libraries: {"DispatchLib": "DispatchLib.address"},
-            //     constructorArgs: ["RQDQ.address"]
-            // }
+                constructorArgs: ["0x3F012C2e7c35fE523c8B70d6268dB72d3B4D77EC","WETH.address"]
+            },
         ],
-        "initialize.js": [
-            // {
-            //     contract: "DQ",
-            //     function: "initialize",
-            //     args: ["RQ.address","DQURI.address"]
-            // },
-            // {
-            //     contract: "RQDQ",
-            //     function: "initialize",
-            //     args: ["ReservationBook.address"]
-            // }
-        ]
-        // ,
-        // "verify.js": ["+REST"]
+        "initialize.js": [],
     },
     "goerli": {
         "deploy.js": [
             {
-                name: "BadERC721"
-            }
-            // ,
-            // {
-            //     name: "CommonNFT"
-            // },
-            // {
-            //     name: "BasisPoints"
-            // },
-            // {
-            //     name: "DQ",
-            //     libraries: {"BasisPoints": "BasisPoints.address"}
-            // },
-            // {
-            //     name: "DQURI"
-            // },
-            // {
-            //     name: "Base64"
-            // },
-            // {
-            //     name: "RQ",
-            //     libraries: {"BasisPoints": "BasisPoints.address"},
-            //     constructorArgs: ["DQ.address"]
-            // },
-            // {
-            //     name: "DispatchLib"
-            // },
-            // {
-            //     name: "RQDQURI"
-            // },
-            // {
-            //     name: "RQDQ",
-            //     libraries: {"DispatchLib": "DispatchLib.address", "BasisPoints": "BasisPoints.address"},
-            //     constructorArgs: ["K21.address", "RQDQURI.address"]
-            // },
-            // {
-            //     name: "ReservationBook",
-            //     libraries: {"DispatchLib": "DispatchLib.address"},
-            //     constructorArgs: ["RQDQ.address"]
-            // }
-        ]
-        ,
-        // "initialize.js": [
-        //     {
-        //         contract: "DQ",
-        //         function: "initialize",
-        //         args: ["RQ.address","DQURI.address"]
-        //     },
-        //     {
-        //         contract: "RQDQ",
-        //         function: "initialize",
-        //         args: ["ReservationBook.address"]
-        //     }
-        // ],
-        "verify.js": ["BadERC721"]
+                name: "WETH"
+            },
+            {
+                name: "AuctionHouse",
+                constructorArgs: ["0x3F012C2e7c35fE523c8B70d6268dB72d3B4D77EC","WETH.address"]
+            },
+        ],
+        "initialize.js": [],
+        "verify.js": ["+REST"]
     }, 
-    // "mainnet": {
-    //     "deploy.js": [
-    //         {
-    //             name: "K21"
-    //         },
-    //         {
-    //             name: "CommonNFT"
-    //         },
-    //         {
-    //             name: "BasisPoints"
-    //         },
-    //         {
-    //             name: "DQ",
-    //             libraries: {"BasisPoints": "BasisPoints.address"}
-    //         },
-    //         {
-    //             name: "DQURI"
-    //         },
-    //         {
-    //             name: "Base64"
-    //         },
-    //         {
-    //             name: "RQ",
-    //             libraries: {"BasisPoints": "BasisPoints.address"},
-    //             constructorArgs: ["DQ.address"]
-    //         },
-    //         {
-    //             name: "DispatchLib"
-    //         },
-    //         {
-    //             name: "RQDQURI"
-    //         },
-    //         {
-    //             name: "RQDQ",
-    //             libraries: {"DispatchLib": "DispatchLib.address", "BasisPoints": "BasisPoints.address"},
-    //             constructorArgs: ["K21.address", "RQDQURI.address"]
-    //         },
-    //         {
-    //             name: "ReservationBook",
-    //             libraries: {"DispatchLib": "DispatchLib.address"},
-    //             constructorArgs: ["RQDQ.address"]
-    //         }
-    //     ],
-    //     "initialize.js": [
-    //         {
-    //             contract: "DQ",
-    //             function: "initialize",
-    //             args: ["RQ.address","DQURI.address"]
-    //         },
-    //         {
-    //             contract: "RQDQ",
-    //             function: "initialize",
-    //             args: ["ReservationBook.address"]
-    //         }
-    //     ],
-    //     "verify.js": ["+REST"]
-    // }
+    "mainnet": {}
 }
