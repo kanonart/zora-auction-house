@@ -43,8 +43,8 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^3.2.0",
-    "@zoralabs/core": "^1.0.7",
+    "@kanonart/zoralabs-core": "^1.0.2",
+    "openzeppelin-solidity-3.2": "npm:@openzeppelin/contracts@3.2.0",
     "dotenv": "^8.2.0",
     "fs-extra": "^9.1.0",
     "hardhat-ignore-warnings": "^0.2.9",

@@ -3,7 +3,7 @@
 // FOR TEST PURPOSES ONLY. NOT PRODUCTION SAFE
 pragma solidity 0.6.8;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "openzeppelin-solidity-3.2/token/ERC721/ERC721.sol";
 
 contract TestERC721 is ERC721 {
     constructor() ERC721("TestERC721", "TEST") public {}

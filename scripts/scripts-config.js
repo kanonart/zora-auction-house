@@ -6,7 +6,7 @@ module.exports = {
             },
             {
                 name: "AuctionHouse",
-                constructorArgs: ["0x3F012C2e7c35fE523c8B70d6268dB72d3B4D77EC","WETH.address"]
+                constructorArgs: ["0xcc341FfDf46c08B5939FF62cf5D66572Fd5Da5e2","WETH.address"]
             },
         ],
         "initialize.js": [],
@@ -18,7 +18,7 @@ module.exports = {
             },
             {
                 name: "AuctionHouse",
-                constructorArgs: ["0x3F012C2e7c35fE523c8B70d6268dB72d3B4D77EC","WETH.address"]
+                constructorArgs: ["0xcc341FfDf46c08B5939FF62cf5D66572Fd5Da5e2","WETH.address"]
             },
         ],
         "initialize.js": [],

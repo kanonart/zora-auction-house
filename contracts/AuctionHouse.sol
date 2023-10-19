@@ -3,14 +3,14 @@
 pragma solidity 0.6.8;
 pragma experimental ABIEncoderV2;
 
-import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
-import { IERC721, IERC165 } from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import { ReentrancyGuard } from "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
-import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
-import {Counters} from "@openzeppelin/contracts/utils/Counters.sol";
-import { IMarket, Decimal } from "@zoralabs/core/dist/contracts/interfaces/IMarket.sol";
-import { IMedia } from "@zoralabs/core/dist/contracts/interfaces/IMedia.sol";
+import { SafeMath } from "openzeppelin-solidity-3.2/math/SafeMath.sol";
+import { IERC721, IERC165 } from "openzeppelin-solidity-3.2/token/ERC721/IERC721.sol";
+import { ReentrancyGuard } from "openzeppelin-solidity-3.2/utils/ReentrancyGuard.sol";
+import {IERC20} from "openzeppelin-solidity-3.2/token/ERC20/IERC20.sol";
+import { SafeERC20 } from "openzeppelin-solidity-3.2/token/ERC20/SafeERC20.sol";
+import {Counters} from "openzeppelin-solidity-3.2/utils/Counters.sol";
+import { IMarket, Decimal } from "@kanonart/zoralabs-core/contracts/interfaces/IMarket.sol";
+import { IMedia } from "@kanonart/zoralabs-core/contracts/interfaces/IMedia.sol";
 import { IAuctionHouse } from "./interfaces/IAuctionHouse.sol";
 
 interface IWETH {
